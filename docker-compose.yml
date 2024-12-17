@@ -43,7 +43,7 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
     cap_add:
-      - SYS_NICE  # CAP_SYS_NICE Prevent runaway mysql log
+      - SYS_NICE  # CAP_SYS_NICE Prevent runaway mysql log.
     healthcheck:
       test: mysqladmin --user=$$MYSQL_USER --password=$$MYSQL_PASSWORD status
       interval: 2s
